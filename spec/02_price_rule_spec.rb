@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe 'price rule service' do
 
-  before(:each) do
+  before(:all) do
     @price_rule_service = PriceRuleService.new
   end
 

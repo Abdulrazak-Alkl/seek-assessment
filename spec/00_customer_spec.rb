@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe 'customer service' do
 
-  before(:each) do
+  before(:all) do
     @customer_service = CustomerService.new
   end
 

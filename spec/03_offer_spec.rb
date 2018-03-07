@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe 'offer service' do
 
-  before(:each) do
+  before(:all) do
     @offer_service = OfferService.new
   end
 

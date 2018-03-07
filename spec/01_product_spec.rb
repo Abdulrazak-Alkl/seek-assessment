@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe 'product service' do
 
-  before(:each) do
+  before(:all) do
     @product_service = ProductService.new
   end
 
