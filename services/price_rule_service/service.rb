@@ -19,7 +19,6 @@ class PriceRuleService
   #
   def evaluate_price_rule(price_rule_id, items)
     price_rule = PriceRule.find(price_rule_id)
-    total_discount = 0
     case price_rule.value_type
       when ENTITLEMENTS::FIXED_PRICE
         total_discount, items = resolve_rule(price_rule, items) { |amount, rule_value| amount - rule_value }
