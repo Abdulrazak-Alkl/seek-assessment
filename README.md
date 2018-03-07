@@ -1,5 +1,17 @@
 # Seek Assessment 
 
+## TO DO
+
+* Add more specs to cover more use cases
+* Seed some data for testing purposes so each service spec becomes independent 
+* Compile services logic in a gem 
+* Encapsulate each service in a separate containerized application
+* Each service exposed via HTTP interfaces
+* Each service has it's own DB
+* I used SQLite for testing purposes and portability but it's better to be changed to postges
+* Use Redis for Cart Services
+* Write simple React app to consume those services
+
 ## How to run the test code using Docker
 
 ```bash
