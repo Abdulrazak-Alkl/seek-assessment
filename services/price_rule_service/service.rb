@@ -13,13 +13,12 @@ class PriceRuleService
   #
   # @return [Array[Integer, Array]]
   #
-  # Example of return value :
+  # Examples of return value :
   # [total_discount, items_with_discount]
   # [200, [{sku: 'classic', price: 213.99, discount: 100},{sku: 'standout', price: 322.99, discount: 100}] ]]
   #
   def evaluate_price_rule(price_rule_id, items)
     price_rule = PriceRule.find(price_rule_id)
-    total_discount = 0
     case price_rule.value_type
       when ENTITLEMENTS::FIXED_PRICE
         total_discount, items = resolve_rule(price_rule, items) { |amount, rule_value| amount - rule_value }
